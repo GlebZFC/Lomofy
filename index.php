@@ -5,30 +5,30 @@
 	<meta http-equiv="Content-Type"	content="text/html; charset=windows-1251">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="robots" content="all">
-	<meta name="keywords" content="ломостенка">
-	<meta name="description" content="Ломостенка">
+	<meta name="keywords" content="Р»РѕРјРѕСЃС‚РµРЅРєР°">
+	<meta name="description" content="Р›РѕРјРѕСЃС‚РµРЅРєР°">
 	  <style>
 		   .content { 
-		    width: 100%; /* Ширина */
+		    width: 100%; /* РЁРёСЂРёРЅР° */
 		    margin: 0px;
 		    padding: 0px;
 		    border: 0px solid #000;
 		   }
 		   .photoparams { 
-		    width: 300px; /* Ширина */
+		    width: 300px; /* РЁРёСЂРёРЅР° */
 		    margin: 0px;
 		    padding: 0px;
 		    border: 0px solid #000;
 		    text-align: left;
 		   }
 		   .footer { 
-		    width: 100%; /* Ширина */
+		    width: 100%; /* РЁРёСЂРёРЅР° */
 		    border: 0px solid #000;
 		    text-align: center;
 		   }
 	  </style>
 	
-	<title>Lomofy. Фотостенка</title>
+	<title>Lomofy. Р¤РѕС‚РѕСЃС‚РµРЅРєР°</title>
 </head>
 
 <body>
@@ -44,20 +44,20 @@
 					<img src="example4.jpg" hspace="5" vspace="5">
 				</p>
 				<div class="content">
-					<h1>Lomofy. Фотостенка</h1>
+					<h1>Lomofy. Р¤РѕС‚РѕСЃС‚РµРЅРєР°</h1>
 					<p>
-						Здесь можно сделать коллаж 3х3 в стиле фотостенок ломографии.<br>
-						Внизу появится ваш коллаж, который можно сохранить себе или поделиться с друзьями ВКонтакте, Фейсбуке<br>
+						Р—РґРµСЃСЊ РјРѕР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РєРѕР»Р»Р°Р¶ 3С…3 РІ СЃС‚РёР»Рµ С„РѕС‚РѕСЃС‚РµРЅРѕРє Р»РѕРјРѕРіСЂР°С„РёРё.<br>
+						Р’РЅРёР·Сѓ РїРѕСЏРІРёС‚СЃСЏ РІР°С€ РєРѕР»Р»Р°Р¶, РєРѕС‚РѕСЂС‹Р№ РјРѕР¶РЅРѕ СЃРѕС…СЂР°РЅРёС‚СЊ СЃРµР±Рµ РёР»Рё РїРѕРґРµР»РёС‚СЊСЃСЏ СЃ РґСЂСѓР·СЊСЏРјРё Р’РљРѕРЅС‚Р°РєС‚Рµ, Р¤РµР№СЃР±СѓРєРµ<br>
 					</p>
 					<form enctype="multipart/form-data" method="post">
 						<p>
 							<input type="hidden" name="MAX_FILE_SIZE" value="3400000"> <input
 								type="file" name="upload[]" multiple accept="image/*,image/jpeg">
-							<input type="submit" value="Отправить">
+							<input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ">
 						</p>
 					</form>
 					<p>
-						Выберите 9 фотографий и нажмите "Отправить" (горизонтальные JPG до 3 МБ)
+						Р’С‹Р±РµСЂРёС‚Рµ 9 С„РѕС‚РѕРіСЂР°С„РёР№ Рё РЅР°Р¶РјРёС‚Рµ "РћС‚РїСЂР°РІРёС‚СЊ" (РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Рµ JPG РґРѕ 3 РњР‘)
 					</p>
 		<?php
 		
@@ -67,31 +67,31 @@
 		$check_ok = 0;
 		for($i = 0; $i < $fileCount; $i ++) {
 			if ($myFile ["type"] [$i] != "image/jpeg" || $myFile ["size"] [$i] > 3400000) {
-				echo "Проблема с фотографией " . $myFile ["name"] [$i] . ":<br>";
+				echo "РџСЂРѕР±Р»РµРјР° СЃ С„РѕС‚РѕРіСЂР°С„РёРµР№ " . $myFile ["name"] [$i] . ":<br>";
 				if ($myFile ["type"] [$i] != "image/jpeg"){
-					echo "Тип файла должен быть JPG<br>";
+					echo "РўРёРї С„Р°Р№Р»Р° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ JPG<br>";
 					$check_ok++;
 				}
 				if ($myFile ["size"] [$i] > 3400000){
-					echo "Размер файла должен быть до 3.4 магабайта<br>";
+					echo "Р Р°Р·РјРµСЂ С„Р°Р№Р»Р° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РґРѕ 3.4 РјР°РіР°Р±Р°Р№С‚Р°<br>";
 					$check_ok++;
 				}
 			}
 		}
 		
 		if (count ( $_FILES ['upload'] ['name'] ) == 9 && $check_ok == 0) {
-			// путь к файлу
+			// РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
 			$filename = '1.jpg';
 			
-			// задание ширины и высоты
+			// Р·Р°РґР°РЅРёРµ С€РёСЂРёРЅС‹ Рё РІС‹СЃРѕС‚С‹
 			$width = 300;
 			$height = 300;
 			date_default_timezone_set ( 'Europe/Moscow' );
 			
-			// Находим коэффициент
+			// РќР°С…РѕРґРёРј РєРѕСЌС„С„РёС†РёРµРЅС‚
 			list ( $width_orig, $height_orig ) = getimagesize ( $_FILES ['upload'] ['tmp_name'] [0] );
 			$k = $width_orig / $height_orig;
-			// создаем пустое полотно
+			// СЃРѕР·РґР°РµРј РїСѓСЃС‚РѕРµ РїРѕР»РѕС‚РЅРѕ
 			$image_p = imagecreatetruecolor ( 900, 900 / $k );
 			
 			$filename = $_FILES ['upload'] ['name'] [0];
@@ -257,18 +257,18 @@
 			unlink ( $filename );
 			imagedestroy ( $image );
 			
-			// вывод
+			// РІС‹РІРѕРґ
 			imagejpeg ( $image_p, 'new.jpg', 100 );
 			$newname = "" . date ( 'YmdHis', time () ) . mt_rand () . ".jpg";
 			copy ( "new.jpg", $newname );
-			if (mail ( 'gleb.itech@gmail.com', 'Картинка', "Картинка: http://your_domain/lomofy/" . $newname . "\n\n" ))
+			if (mail ( 'gleb.itech@gmail.com', 'РљР°СЂС‚РёРЅРєР°', "РљР°СЂС‚РёРЅРєР°: http://your_domain/lomofy/" . $newname . "\n\n" ))
 				echo "";
 			else
 				echo "<br>ok?";
 			
 			echo "<br><br><img src='new.jpg'>";
 		} else if(count ( $_FILES ['upload'] ['name'] ) != 0)
-			echo "<i>Вы загрузили " . count ( $_FILES ['upload'] ['name'] ) . " фотографий, а должно быть 9.</i><br>";
+			echo "<i>Р’С‹ Р·Р°РіСЂСѓР·РёР»Рё " . count ( $_FILES ['upload'] ['name'] ) . " С„РѕС‚РѕРіСЂР°С„РёР№, Р° РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 9.</i><br>";
 
 	?>
 				</div>
