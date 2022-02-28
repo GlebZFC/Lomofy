@@ -261,14 +261,14 @@
 			imagejpeg ( $image_p, 'new.jpg', 100 );
 			$newname = "" . date ( 'YmdHis', time () ) . mt_rand () . ".jpg";
 			copy ( "new.jpg", $newname );
-			if (mail ( 'gleb.itech@gmail.com', 'Картинка', "Картинка: http://your_domain/lomofy/" . $newname . "\n\n" ))
+			if (mail ( 'email@domain', 'Картинка', "Картинка: http://your_domain/lomofy/" . $newname . "\n\n" ))
 				echo "";
 			else
 				echo "<br>ok?";
 			
 			echo "<br><br><img src='new.jpg'>";
 		} else if(count ( $_FILES ['upload'] ['name'] ) != 0)
-			echo "<i>Вы загрузили " . count ( $_FILES ['upload'] ['name'] ) . " фотографий, а должно быть 9.</i><br>";
+			echo "<i>Ошибка: вы загрузили " . count ( $_FILES ['upload'] ['name'] ) . " фотографий, а должно быть 9.</i><br>";
 
 	?>
 				</div>
